@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        input{
+            margin: 1%;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="maths" placeholder="Enter your maths marks "><br \>
+    <input type="text" id="science" placeholder="Enter your science marks " > <br \>
+    <input type="text" id="sst" placeholder="Enter your sst marks " > <br \>
+    <input type ="button" id="buon" value="Click me."> <br \>
+    <input type ="text" id="sum" placeholder="your addition"> <br \>
+    <input type ="text" id="per" placeholder="your percentage"> <br \>
+
+
+    <script>
+       
+        $(document).ready(function(){
+            $("#buon").click(function(){
+                let a = ($("#maths").val());
+                let b = ($("#science").val());
+                let c = ($("#sst").val());
+
+                let add = parseInt(a)+  parseInt(b) +parseInt(c);
+                $("#sum").val(add);
+
+                let percen = add/3;
+                $("#per").val(percen);
+        
+            })
+        })
+    </script>
+</body>
+</html>
