@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>Hello</p>
+    <p id="hid">Hello</p>
+    <p class="hclass">Hello</p>
+    <p name="hname">Hello</p>
+    <input type="text" value="7" id="num1">
+    <input type="text" value="10 " id="num2">
+    
+    <span>=</span>
+    
+    
+    <script>
+        $(document).ready(function(){
+
+    $("p").css("color","red");
+    $("#hid").css("color","green");
+    $(".hclass").css("color","blue");
+    $('[name="hname"]').css("color","yellow");
+
+    let num1 = ($("#num1").val());
+    let num2 = ($("#num2").val());
+
+    var num3 = parseInt(num1)+parseInt(num2);
+     
+    alert(num3);
+
+    })
+    </script>
+</body>
+</html>
