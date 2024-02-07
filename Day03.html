@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+
+            $("#yellow").click(function(){
+            $("*").css("color","yellow");
+            $("#yellow").css("background-color","yellow");
+            $("#red").css("background-color","transparent");
+            })
+
+            $("#red").click(function(){
+                $("*").css("color","red");
+                $("#red").css("background-color","red");
+                $("#yellow").css("background-color","transparent");
+
+            })
+        
+        })
+    </script>
+
+    <p>My First Heading</p>
+    <h1>My First Heading </h1>
+    <h2>My Second Heanding</h2>
+    <input type="button" id="yellow" value="click for yellow color">
+    <input type="button" id="red" value="click for red color">
+</body>
+</html>
