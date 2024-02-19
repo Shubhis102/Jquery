@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <button>click me </button>
+    <div id="mydata"></div>
+
+    <script>
+        let i;
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.getJSON("https://dummyjson.com/carts",function(mydata){
+                    $("#mydata").html("<table><tr><th>Id</th><th>Price</th></tr></table>");
+                    for(i=0;i<10;i++){
+                        $("#mydata").append("<tr> <td> "+mydata.carts.id[i]+"</td><td>"+mydata.carts.price[i]+"</td></tr>");
+                    }
+
+
+
+                    /*$("#myJsonData").html("<p> Produnct Id : "+myjsondata.carts[0].id+"</p>");
+                   $("#myJsonData").append("<p> Produnct Name : "+myjsondata.carts[0].products[0].title+"</p>");*/
+
+                  
+                }
+            )})
+        })
+
+    </script>
+</body>
+</html>

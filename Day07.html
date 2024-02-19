@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <p >p1</p>
+    <button id="B">BOLD</button>
+    <button id="I">ITALIC</button>
+    <button id="C">COLOR</button>
+    <button id="F">FONTSIZE</button>
+
+
+
+    
+    <p>p2</p>
+    <p>p3</p>
+</div>
+    <script>
+        $(document).ready(function(){
+           /* $("p").eq(1).css({
+                color :"green"
+            })*/
+
+            $("#B").click(function(){
+                $("p").eq(0).wrap("<b>");
+            })
+            $("#I").click(function(){
+                $("p").eq(0).wrap("<i>");
+            })
+            $("#C").click(function(){
+                $("p").eq(0).css({
+                    color : "red"
+                });
+            })
+            $("#F").on("click",function(){
+                $("p").eq(0).animate({
+                    fontSize : "+=100px"
+                })
+            })
+
+        })
+    </script>
+</body>
+</html>
